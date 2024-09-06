@@ -261,7 +261,7 @@ class Sensei(MockableTestResult):
     def filter_all_lessons(self):
         cur_dir = os.path.split(os.path.realpath(__file__))[0]
         if not self.all_lessons:
-            self.all_lessons = glob.glob('{0}/../koans/about*.py'.format(cur_dir))
+            self.all_lessons = glob.glob('{0}/../koans/test_about*.py'.format(cur_dir))
             self.all_lessons = list(filter(lambda filename:
                                       "about_extra_credit" not in filename,
                                       self.all_lessons))
