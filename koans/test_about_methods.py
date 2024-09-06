@@ -5,7 +5,7 @@
 # Partially based on AboutMethods in the Ruby Koans
 #
 
-from runner.koan import *
+from runner.koan import Koan, __
 
 
 def my_global_function(a, b):

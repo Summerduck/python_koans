@@ -8,7 +8,7 @@
 # a lot differently
 #
 
-from runner.koan import *
+from runner.koan import Koan, __
 
 
 class AboutGeneratorsTest(Koan):

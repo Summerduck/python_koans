@@ -5,7 +5,7 @@
 # Based slightly on the lambdas section of AboutBlocks in the Ruby Koans
 #
 
-from runner.koan import *
+from runner.koan import Koan, __
 
 
 class AboutLambdasTest(Koan):

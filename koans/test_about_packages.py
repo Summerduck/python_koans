@@ -6,7 +6,7 @@
 # Our AboutMultipleInheritance class is a little more comparable
 #
 
-from runner.koan import *
+from runner.koan import Koan, __
 
 #
 # Package hierarchy of Python Koans project:

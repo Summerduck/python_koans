@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from runner.koan import *
+from runner.koan import Koan, __
 
 
 class AboutDeletingObjectsTest(Koan):

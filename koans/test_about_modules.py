@@ -6,7 +6,7 @@
 # Our AboutMultipleInheritance class is a little more comparable
 #
 
-from runner.koan import *
+from runner.koan import Koan, __
 
 from .another_local_module import *
 from .local_module_with_all_defined import *

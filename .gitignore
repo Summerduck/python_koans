@@ -4,3 +4,11 @@
 answers
 .hg
 .idea
+venv
+.pytest_cache
+.venv
+__pycache__
+credentials.py
+.env
+env/
+.vscode/

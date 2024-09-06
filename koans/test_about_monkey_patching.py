@@ -5,7 +5,7 @@
 # Related to AboutOpenClasses in the Ruby Koans
 #
 
-from runner.koan import *
+from runner.koan import Koan, __
 
 
 class AboutMonkeyPatchingTest(Koan):

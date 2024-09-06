@@ -5,7 +5,7 @@
 # Based on AboutSandwichCode in the Ruby Koans
 #
 
-from runner.koan import *
+from runner.koan import Koan, __
 
 import re  # For regular expression string comparisons
 

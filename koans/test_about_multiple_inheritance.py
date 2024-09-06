@@ -5,7 +5,7 @@
 # Slightly based on AboutModules in the Ruby Koans
 #
 
-from runner.koan import *
+from runner.koan import Koan, __
 
 
 class AboutMultipleInheritanceTest(Koan):

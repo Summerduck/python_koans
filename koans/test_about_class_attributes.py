@@ -5,7 +5,7 @@
 # Based on AboutClassMethods in the Ruby Koans
 #
 
-from runner.koan import *
+from runner.koan import Koan, __
 
 
 class AboutClassAttributesTest(Koan):
