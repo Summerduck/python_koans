@@ -5,7 +5,7 @@
 # Partially based on AboutMessagePassing in the Ruby Koans
 #
 
-from runner.koan import Koan, __
+from runner.koan import Koan, __, ___
 
 
 class AboutAttributeAccessTest(Koan):

@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from runner.koan import Koan
+from runner.koan import Koan, __
 
 
 class AboutAssertsTest(Koan):
@@ -15,25 +15,25 @@ class AboutAssertsTest(Koan):
         #
         #   http://bit.ly/about_asserts
 
-        self.assertTrue(True)  # This should be True
+        self.assertTrue(False)  # This should be True
 
     def test_assert_with_message(self):
         """
         Enlightenment may be more easily achieved with appropriate messages.
         """
-        self.assertTrue(True, "This should be True -- Please fix this")
+        self.assertTrue(False, "This should be True -- Please fix this")
 
     def test_fill_in_values(self):
         """
         Sometimes we will ask you to fill in the values
         """
-        self.assertEqual(2, 1 + 1)
+        self.assertEqual(__, 1 + 1)
 
     def test_assert_equality(self):
         """
         To understand reality, we must compare our expectations against reality.
         """
-        expected_value = 2
+        expected_value = __
         actual_value = 1 + 1
         self.assertTrue(expected_value == actual_value)
 
@@ -41,7 +41,7 @@ class AboutAssertsTest(Koan):
         """
         Some ways of asserting equality are better than others.
         """
-        expected_value = 2
+        expected_value = __
         actual_value = 1 + 1
 
         self.assertEqual(expected_value, actual_value)
@@ -52,7 +52,7 @@ class AboutAssertsTest(Koan):
         """
 
         # This throws an AssertionError exception
-        assert True
+        assert False
 
     def test_that_sometimes_we_need_to_know_the_class_type(self):
         """
@@ -71,7 +71,7 @@ class AboutAssertsTest(Koan):
         #
         # See for yourself:
 
-        self.assertEqual(str, "navel".__class__)  # It's str, not <type 'str'>
+        self.assertEqual(__, "navel".__class__)  # It's str, not <type 'str'>
 
         # Need an illustration? More reading can be found here:
         #

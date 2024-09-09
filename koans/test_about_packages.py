@@ -56,6 +56,6 @@ class AboutPackagesTest(Koan):
 
     def test_import_a_module_in_a_subfolder_folder_using_an_absolute_path(self):
         # Import contemplate_koans.py/koans/a_package_folder/a_module.py
-        from koans_summerduck.a_package_folder.a_module import Duck
+        from koans.a_package_folder.a_module import Duck
 
         self.assertEqual(__, Duck.__module__)

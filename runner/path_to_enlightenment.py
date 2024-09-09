@@ -8,8 +8,6 @@ Path to Enlightenment.
 
 import io
 import unittest
-import os
-import sys
 
 
 # The path to enlightenment starts with the following:
@@ -57,13 +55,11 @@ def koans_suite(names):
     return suite
 
 
-def koans():
+def koans(user=None):
     """
     Returns a ``TestSuite`` loaded with all the koans (``TestCase``s)
     listed in ``filename``.
     """
-    # user = "summerduck"
-    user = input("Enter a user name: ")
     names = names_from_file(KOANS_FILENAME)
     if user:
         names = [name.replace("koans.", f"koans_{user}.") for name in names]

@@ -10,9 +10,9 @@ from .writeln_decorator import WritelnDecorator
 
 
 class Mountain:
-    def __init__(self):
+    def __init__(self, user=None):
         self.stream = WritelnDecorator(sys.stdout)
-        self.tests = path_to_enlightenment.koans()
+        self.tests = path_to_enlightenment.koans(user)
         self.lesson = Sensei(self.stream)
 
     def walk_the_path(self, args=None):
