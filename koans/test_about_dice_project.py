@@ -1,9 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from runner.koan import Koan, __
-
-import random
+from runner.koan import Koan
 
 
 class DiceSet:
