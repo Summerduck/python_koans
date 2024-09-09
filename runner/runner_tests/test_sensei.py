@@ -4,11 +4,10 @@
 import unittest
 import re
 
-from libs.mock import *
+from libs.mock import Mock, patch
 
 from runner.sensei import Sensei
 from runner.writeln_decorator import WritelnDecorator
-from runner.mockable_test_result import MockableTestResult
 
 
 class AboutParrots:

@@ -190,7 +190,9 @@ class Sensei(MockableTestResult):
 
         stack_text = ""
         for line in lines:
-            m = re.search("^.*[/\\\\]koans[/\\\\].*$", line)
+            m = re.search(
+                "^.*[/\\\\]koans_[a-zA-Z0-9]+[/\\\\].*$|^.*[/\\\\]koans[/\\\\].*$", line
+            )
             if m and m.group(0):
                 stack_text += line + "\n"
 
