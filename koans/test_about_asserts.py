@@ -15,7 +15,7 @@ class AboutAssertsTest(Koan):
         #
         #   http://bit.ly/about_asserts
 
-        self.assertTrue(False)  # This should be True
+        self.assertTrue(True)  # This should be True
 
     def test_assert_with_message(self):
         """
@@ -27,7 +27,7 @@ class AboutAssertsTest(Koan):
         """
         Sometimes we will ask you to fill in the values
         """
-        self.assertEqual(__, 1 + 1)
+        self.assertEqual(2, 1 + 1)
 
     def test_assert_equality(self):
         """

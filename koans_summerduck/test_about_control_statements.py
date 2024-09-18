@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from runner.koan import Koan, __
+from runner.koan import Koan
 
 
 class AboutControlStatementsTest(Koan):
