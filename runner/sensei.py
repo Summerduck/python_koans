@@ -38,7 +38,10 @@ class Sensei(MockableTestResult):
                         Fore.RESET, Style.NORMAL, helper.cls_name(test)
                     )
                 )
-                if helper.cls_name(test) not in ["AboutAsserts", "AboutExtraCredit"]:
+                if helper.cls_name(test) not in [
+                    "AboutAssertsTest",
+                    "AboutExtraCreditTest",
+                ]:
                     self.lesson_pass_count += 1
 
     def addSuccess(self, test):
