@@ -1,34 +1,13 @@
-============
+
 Python Koans
 ============
-
-.. image:: https://travis-ci.org/gregmalcolm/python_koans.png?branch=master
-   :target: http://travis-ci.org/gregmalcolm/python_koans
-
-.. image:: https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod
-    :target: https://gitpod.io/#https://github.com/gregmalcolm/python_koans
-    
-.. image:: https://www.eclipse.org/che/contribute.svg
-    :target: https://workspaces.openshift.com/f?url=https://gitpod.io/#https://github.com/gregmalcolm/python_koans
-
-One click installation:
------------------------
-
-.. image:: https://www.eclipse.org/che/contribute.svg
-    :target: https://workspaces.openshift.com/f?url=https://gitpod.io/#https://github.com/gregmalcolm/python_koans
-|   or
-.. image:: https://gitpod.io/button/open-in-gitpod.svg
-    :target: https://gitpod.io/#https://gitpod.io/#https://github.com/gregmalcolm/python_koans
-
-|
-
-Python Koans is a port of Edgecase's "Ruby Koans" which can be found
-at http://rubykoans.com/.
-
-.. image:: https://user-images.githubusercontent.com/2614930/28401740-ec6214b2-6cd0-11e7-8afd-30ed3102bfd6.png
-
 Python Koans is an interactive tutorial for learning the Python programming
 language by making tests pass.
+
+![Alt text](https://user-images.githubusercontent.com/2614930/28401740-ec6214b2-6cd0-11e7-8afd-30ed3102bfd6.png)
+Python Koans is a port of Edgecase's "Ruby Koans" 
+at http://rubykoans.com/.
+
 
 Most tests are *fixed* by filling the missing parts of assert functions. Eg:
 
@@ -47,52 +26,58 @@ As well as being a great way to learn some Python, it is also a good way to get
 a taste of Test Driven Development (TDD).
 
 
-Downloading Python Koans
-------------------------
 
-Python Koans is available through git on Github:
+Installing Python
+-----------------
 
-    http://github.com/gregmalcolm/python_koans
+To use Python Koans, you need to install the Python interpreter. We currently support Python 3 and aim to stay updated with the latest production version. While newer Python versions should work fine, older versions may cause issues.
 
-Either site will allow you to download the source as a zip/gz/bz2.
+You can download Python from the official website: [Download Python](http://www.python.org/download)
+
+After installing Python, ensure the folder containing the Python executable is in your system path. This allows you to run Python from a command console using `python3` or `python.exe` on Windows.
+
+For additional help, visit: [Getting Started with Python](http://www.python.org/about/gettingstarted)
 
 
 Installing Python Koans
 -----------------------
 
-Aside from downloading or checking out the latest version of Python Koans, you
-need to install the Python interpreter.
+To install Python Koans, follow these steps:
 
-At this time of writing, we support Python3. The policy is to try to keep
-current with the latest production version.
+1. **Clone the repository**:
+    ```sh
+    git clone https://github.com/Summerduck/python_koans
+    ```
+2. **Create and activate virtual environment in this repo**:
+    ```sh
+    python -m venv venv
+    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+    ```
+3. **Install python-dotenv**:
+    ```sh
+    pip install python-dotenv
+    ```
+4. **Create a `.env` file in the root of the repository** and add your username:
+    ```sh
+    echo 'USER="your_username"' > .env
+    ```
 
-You should be able to work with newer Python versions, but older ones will
-likely give you problems.
+5. **Make a copy of the `koans` directory and rename it to `koans_your_username`**
+    ```sh
+    cp -r koans koans_your_username
+    ```
+6. **Run the koans**:
+    ```sh
+    python3 contemplate_koans.py
+    ```
 
-You can download Python from here:
-
-    http://www.python.org/download
-
-After installing Python make sure the folder containing the python executable
-is in the system path. In other words, you need to be able to run Python from a
-command console. It will either be `python3` or for windows it will be `python.exe`.
-
-If you have problems, this may help:
-
-    http://www.python.org/about/gettingstarted
-
-Windows users may also want to update the line in the batch file `run.bat` to
-set the python path::
-
-    SET PYTHON_PATH=C:\Python39
+This will start the interactive tutorial. Follow the instructions and modify the code to make the tests pass.
 
 
-Getting Started
+Run the tests by command line
 ---------------
 
-Jake Hebbert has created a couple of screencasts available here:
-
-http://www.youtube.com/watch?v=e2WXgXEjbHY&list=PL5Up_u-XkWgNcunP_UrTJG_3EXgbK2BQJ&index=1
+Jake Hebbert has created a couple of screencasts available [here](http://www.youtube.com/watch?v=e2WXgXEjbHY&list=PL5Up_u-XkWgNcunP_UrTJG_3EXgbK2BQJ&index=1)
 
 Or if you prefer to read:
 
@@ -100,14 +85,14 @@ From a \*nix terminal or windows command prompt run::
 
     python contemplate_koans.py
 
-or::
+or
 
     python3 contemplate_koans.py
 
-In my case I'm using Python 3 with windows, so I fire up my command
-shell (cmd.exe) and run this:
 
-.. image:: https://user-images.githubusercontent.com/2614930/28401747-f723ff00-6cd0-11e7-9b9a-a6993b753cf6.png
+![Alt text](/images/compleate_koans.png)
+
+
 
 Apparently a test failed::
 
@@ -116,23 +101,33 @@ Apparently a test failed::
 It also tells me exactly where the problem is, it's an assert on line 12
 of .\\koans\\about_asserts.py. This one is easy, just change False to True to
 make the test pass.
-
+_____
 Sooner or later you will likely encounter tests where you are not sure what the
 expected value should be. For example::
 
     class Dog:
         pass
 
+        class Dog: pass
+
     def test_objects_are_objects(self):
         fido = self.Dog()
         self.assertEqual(__, isinstance(fido, object))
 
-This is where the Python Command Line can come in handy. In this case I can
+This is where the [Python Interpreter](https://cs.stanford.edu/people/nick/py/python-interpreter.html#:~:text=In%20the%20terminal%20type%20the,on%20Windows%20ctrl%2Dz) can come in handy. In this case I can
 fire up the command line, recreate the scenario and run queries:
+![](/images/fido_dog.png)
 
-.. image:: https://user-images.githubusercontent.com/2614930/28401750-f9dcb296-6cd0-11e7-98eb-c20318eada33.png
+The Python Command Line can be very useful for testing and debugging. You can recreate scenarios and run queries interactively.
 
-Sniffer Support
+To start the Python interpreter, open your terminal and type:
+```sh
+python3
+```
+
+For more detailed instructions, visit: [Python Interpreter](https://cs.stanford.edu/people/nick/py/python-interpreter.html#:~:text=In%20the%20terminal%20type%20the,on%20Windows%20ctrl%2Dz)
+
+Run the tests continuously [Sniffer Support]
 ---------------
 
 Sniffer allows you to run the tests continuously. If you modify any files files
@@ -167,6 +162,21 @@ Once it is set up, you just run::
     $ sniffer
 
 Just modify one of the koans files and you'll see that the tests are triggered automatically. Sniffer is controlled by `scent.py`
+
+Run the tests from test explorer
+-------------------------------
+You can also run the tests using the Test Explorer in your IDE. This provides a more visual and interactive way to run and debug the tests.
+
+1. **Open the project in your IDE**: Make sure your IDE supports Python and has a Test Explorer feature (e.g., Visual Studio Code with the Python extension).
+
+2. **Locate the Test Explorer**: This is usually found in the sidebar or under the testing menu.
+
+3. **Run the tests**: You should see a list of all the tests in the project. You can run them all at once or individually by selecting the appropriate options.
+
+4. **Debug the tests**: If a test fails, you can use the debugging features of your IDE to step through the code and identify the issue.
+
+![image](images/run_the_tests_from_test_explorer.png)
+
 
 Getting the Most From the Koans
 -------------------------------
@@ -208,14 +218,6 @@ koans activity on bitbucket.
 
 * Bitbucket koan projects:
     https://bitbucket.org/repo/all?name=koans
-
-Translations
-------------
-
-Translations are always welcome! Feel free to add one to this README
-if you happen to work on one:
-
-https://github.com/mswell/python_koans_br
 
 Acknowledgments
 ---------------
