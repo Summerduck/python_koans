@@ -11,6 +11,8 @@
 #
 
 import sys
+import os
+from dotenv import load_dotenv
 
 if __name__ == "__main__":
     if sys.version_info < (3, 0):
@@ -36,5 +38,5 @@ if __name__ == "__main__":
 
         from runner.mountain import Mountain
 
-        user = input("Enter a user name: ")
-        Mountain(user).walk_the_path(sys.argv)
+        load_dotenv()
+        Mountain(os.getenv("USER")).walk_the_path(sys.argv)
