@@ -1,14 +1,28 @@
 *.pyc
 *.swp
-.DS_Store
 answers
 .hg
-.idea
-venv
 .pytest_cache
-.venv
 __pycache__
 credentials.py
+
+# Environments
 .env
+.venv
 env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# VS Code
 .vscode/
+
+# OS generated
+.DS_Store
+.DS_Store?
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+.idea
