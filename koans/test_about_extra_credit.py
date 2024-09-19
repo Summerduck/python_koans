@@ -10,7 +10,7 @@
 # Write a player class and a Game class to complete the project.  This
 # is a free form assignment, so approach it however you desire.
 
-from runner.koan import Koan, __
+from runner.koan import Koan
 
 
 class AboutExtraCreditTest(Koan):

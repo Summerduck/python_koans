@@ -66,8 +66,8 @@ class AboutMultipleInheritanceTest(Koan):
 
     class Spiderpig(Pig, Spider, Nameable):
         def __init__(self):
-            super(AboutMultipleInheritance.Pig, self).__init__()
-            super(AboutMultipleInheritance.Nameable, self).__init__()
+            super(AboutMultipleInheritanceTest.Pig, self).__init__()
+            super(AboutMultipleInheritanceTest.Nameable, self).__init__()
             self._name = "Jeff"
 
         def speak(self):
@@ -129,10 +129,10 @@ class AboutMultipleInheritanceTest(Koan):
         jeff = self.Spiderpig()
         self.assertRegex(jeff.here(), "Spiderpig")
 
-        next = super(AboutMultipleInheritance.Spiderpig, jeff)
+        next = super(AboutMultipleInheritanceTest.Spiderpig, jeff)
         self.assertRegex(next.here(), "Pig")
 
-        next = super(AboutMultipleInheritance.Pig, jeff)
+        next = super(AboutMultipleInheritanceTest.Pig, jeff)
         self.assertRegex(next.here(), __)
 
         # Hang on a minute?!? That last class name might be a super class of

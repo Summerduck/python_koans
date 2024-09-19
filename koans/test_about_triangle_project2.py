@@ -1,10 +1,10 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from runner.koan import Koan, __
+from runner.koan import Koan
 
 # You need to finish implementing triangle() in the file 'triangle.py'
-from .triangle import *
+from .triangle import TriangleError, triangle
 
 
 class AboutTriangleProject2Test(Koan):

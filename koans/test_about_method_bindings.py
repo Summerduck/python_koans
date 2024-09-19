@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from runner.koan import Koan, __
+from runner.koan import Koan, __, ___
 
 
 def function():
@@ -76,7 +76,7 @@ class AboutMethodBindingsTest(Koan):
 
         self.assertEqual(__, bound_obj.__class__.__name__)
         self.assertEqual(__, binding_owner.__class__.__name__)
-        self.assertEqual(AboutMethodBindings, owner_type)
+        self.assertEqual(AboutMethodBindingsTest, owner_type)
 
     # ------------------------------------------------------------------
 

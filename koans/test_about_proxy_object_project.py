@@ -16,7 +16,7 @@
 # Note: This is a bit trickier than its Ruby Koans counterpart, but you
 # can do it!
 
-from runner.koan import Koan, __
+from runner.koan import Koan
 
 
 class Proxy:

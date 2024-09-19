@@ -5,7 +5,7 @@
 # Based on AboutNil in the Ruby Koans
 #
 
-from runner.koan import Koan, __
+from runner.koan import Koan, __, ____
 
 
 class AboutNoneTest(Koan):
