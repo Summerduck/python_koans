@@ -39,4 +39,4 @@ if __name__ == "__main__":
         from runner.mountain import Mountain
 
         load_dotenv()
-        Mountain(os.getenv("USER")).walk_the_path(sys.argv)
+        Mountain(os.getenv("USERNAME")).walk_the_path(sys.argv)
