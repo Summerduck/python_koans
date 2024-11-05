@@ -50,7 +50,7 @@ To install Python Koans, follow these steps:
     ```
 2. **Create and activate virtual environment in this repo**:
     ```sh
-    python -m venv venv
+    python3 -m venv venv
     source venv/bin/activate  # On Windows use `venv\Scripts\activate`
     ```
 3. **Install python-dotenv**:
@@ -59,7 +59,7 @@ To install Python Koans, follow these steps:
     ```
 4. **Create a `.env` file in the root of the repository** and add your username:
     ```sh
-    echo 'USER="your_username"' > .env
+    echo 'USERNAME="your_username"' > .env
     ```
 
 5. **Make a copy of the `koans` directory and rename it to `koans_your_username`**
